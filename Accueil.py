@@ -14,7 +14,7 @@ st.set_page_config(
 # HEADER
 # ---------------------------------------------------------
 st.title("Certification RNCP3727BC01")
-st.subheader("Analyse, automatisation et visualisation de données")
+
 
 st.markdown(
     """
@@ -71,14 +71,30 @@ st.markdown(
     """
 La démarche suivie repose sur les étapes classiques d’un projet data :
 
-1. **Compréhension du besoin métier**  
-2. **Collecte et exploration des données**  
-3. **Nettoyage et préparation (ETL)**  
-4. **Analyses statistiques et visualisations**  
-5. **Modélisation (si applicable)**  
-6. **Synthèse et recommandations**  
-7. **Déploiement Streamlit**
 
+
+ - Collecte des données (C1)
+   - Mettre en place un flux automatisé pour récupérer les données depuis différentes sources  
+     - Fichiers
+   - Gérer les erreurs et assurer la fiabilité de la collecte
+
+ - Préparation des données (C2 & C3)
+   - Nettoyer les données:
+     - Valeurs manquantes
+     - Formats incorrects
+     - Appliquer des règles d’agrégation pour combiner les données
+     - Transformer les données pour les rendre exploitables
+
+ - Stockage des données (C4)
+   - Créer une base de données
+   - Définir un schéma (MCD / MLD)
+   - Choisir la technologie et l'outillage adaptée
+   - Mettre en place les tables et la structure
+
+ - Mise à disposition des données (C5)
+   - Exposer les données via une API
+   - Sécuriser l’accès à l'API
+   - Vérifier que les données sont accessibles et utilisables
 
 """
 )
@@ -87,4 +103,4 @@ La démarche suivie repose sur les étapes classiques d’un projet data :
 # FOOTER
 # ---------------------------------------------------------
 st.markdown("---")
-st.caption("Projet réalisé dans le cadre de la certification Data Analyst – Streamlit App")
+st.caption("Projet réalisé dans le cadre de la certification RNCP3727BC01")
