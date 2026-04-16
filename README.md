@@ -1,5 +1,5 @@
 # Santé et Territoires
-beige
+
 Profil et analyse épidémiologique du territoire de la Haute-Garonne en 2023.
 
 ---
@@ -31,11 +31,11 @@ Comment aider les acteurs locaux à réaliser un diagnostic de santé publique s
 
 ```bash
 # Cloner le projet
-git clone https://github.com/jjchabutDataCRM/sante-territoires.git
-cd sante-territoires
+git clone https://github.com/ouardianemmar-eng/Application-sante-.git
+cd Application-sante-
 
 # Créer l'environnement virtuel
-pyenv virtualenv 3.11.8 sante-territoires
+pyenv virtualenv 3.11.8 Application-sante-
 # L'activation sera automatique grâce au .python-version
 
 # Installer les dépendances
@@ -49,8 +49,8 @@ python -c "import pandas, geopandas; print('✅ Prêt !')"
 
 ```bash
 # Cloner le projet
-git clone https://github.com/jjchabutDataCRM/sante-territoires.git
-cd sante-territoires
+git clone https://github.com/ouardianemmar-eng/Application-sante-.git
+cd Application-sante-
 
 # Créer l'environnement virtuel
 python -m venv venv
@@ -69,18 +69,21 @@ pip install -r requirements.txt
 ## 📁 Structure du projet
 
 ```
-sante-territoires/
-├── data/                   # Données (non versionnées)
-│   ├── raw/               # Données brutes téléchargées
+Application-sante-/
+├── data/                   # Données
+│   ├── raw/                # Données brutes téléchargées
+│       └── pathologie.csv
+│
 │   ├── processed/         # Données nettoyées et transformées
+│       └── pathologie_clean.csv
 │
 ├── processing/             # Jupyter notebooks d'exploration, d'analyse et du nettoyage des données
 │   └── projet_sante.ipynb
 │
-├── app.py                   # Code source Python de l'application
+├── Accueil.py                   # Code source Python de l'application
 │
 ├── pages/               # Résultats (non versionnés)
-│   └── 🤒 Pathologies.py # Chargement, analyse et visualiation des données en Python
+│   └── Pathologies.py # Chargement, analyse et visualiation des données en Python
 │
 ├── .python-version        # Version Python pour pyenv (auto-activation)
 ├── .gitignore            # Fichiers à ignorer par Git
@@ -94,18 +97,9 @@ sante-territoires/
 
 ### Sources de données utilisées
 
-#### Données géographiques
-- **Contours IRIS** : Découpage infra-communal pour l'analyse géographique
-- **Quartiers prioritaires (QPV)** : Zones d'intervention prioritaire
 
-#### Données de santé
-- **APL (Accessibilité Potentielle Localisée)** : Mesure de l'accessibilité aux médecins généralistes
-- **Offre de soins** : Nombre et répartition des professionnels de santé
-
-#### Données socio-démographiques
-- **Données INSEE** : Population, âge, composition des ménages
-- **Filosofi** : Revenus, taux de pauvreté
-- **Recensement** : Catégories socio-professionnelles, niveau d'éducation
+#### Données sur les pathologies
+- **Données Caisse nationale de l'Assurance Maladie** : effectif de patients par pathologie, sexe, classe d'âge et territoire (département, région)
 
 ### Emplacement des données
 
@@ -120,49 +114,27 @@ sante-territoires/
 
 ```bash
 # Lancer Jupyter Notebook
-jupyter notebook notebooks/projet_sante.ipynb
+jupyter notebook processing/projet_sante.ipynb
 ```
 
 ### Dashboard interactif 
 
 ```bash
 # Lancer le dashboard Streamlit
-streamlit run app.py
+streamlit run Accueil.py
 ```
 
-### Analyses
+### Visualisation
 
-Les scripts d'analyse se trouvent dans le dossier `pages/🤒 Pathologies.py`
+Les scripts de visualisation se trouvent dans le dossier `pages/Pathologies.py`
 
 ---
-
-## 🎯 Livrables prévus
-
-- [ ] Tableau de bord interactif sur l'offre de soin et de prévention
-- [ ] Cartographie des populations vulnérables
-- [ ] Analyse des déserts médicaux
-- [ ] Score de vulnérabilité composite
-- [ ] Rapport final avec recommandations
-
 
 ## 📚 Ressources
 
 ### Contexte du projet
-- [Défi Open Data University - Santé et territoires](https://defis.data.gouv.fr/defis/)
-- [Fondation Roche - Observatoire de l'accès au numérique en santé](https://www.fondationroche.org/)
+- [Défi Open Data University - Santé et territoires](https://defis.data.gouv.fr/datasets/62b31f7b128643f46ea1f848)
 
 ### Documentation technique
 - [GeoPandas Documentation](https://geopandas.org/)
-- [Folium Documentation](https://python-visualization.github.io/folium/)
 - [Streamlit Documentation](https://docs.streamlit.io/)
-
-### Données ouvertes
-- [data.gouv.fr - Santé](https://www.data.gouv.fr/fr/pages/donnees-sante/)
-- [INSEE - Données démographiques](https://www.insee.fr/)
-
----
-
-## 📝 Licence
-
-Ce projet est réalisé dans le cadre d'un projet pédagogique.
-
