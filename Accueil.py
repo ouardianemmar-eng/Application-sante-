@@ -56,6 +56,7 @@ st.markdown(
 
 - **🏠 Accueil** : Présentation générale du projet.   
 - **🤒 Pathologies** : Données relatives aux pathologies sur le territoire en 2015-2023
+- **📈 API** : exposition des données via une API sécurisée
 
 
 
