@@ -18,7 +18,7 @@ tab1, tab2, tab3 = st.tabs([
 ###################vsiualisation des pathologies existantes et leur prevalence dans le departement Haute-Garonne (31)###########################
 
 
-# Filtrer pour le département 31 et l'année 2023
+# Données filtrées par le département 31 et l'année 2023
 df_31_2023 = data[(data['dept'] == 31)& 
                 (data['annee'] == 2023)]
 # Trier par prévalence pour un meilleur rendu visuel
@@ -175,4 +175,4 @@ with tab3:
     """)
     
     
-    
+
