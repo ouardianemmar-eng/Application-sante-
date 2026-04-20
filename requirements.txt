@@ -7,4 +7,6 @@ geopandas
 shapely
 pyproj
 matplotlib
+uvicorn
+fastapi
 
